@@ -1,0 +1,2 @@
+# ShopingCardApplication
+Technologies : SpringBoot Microservices 
