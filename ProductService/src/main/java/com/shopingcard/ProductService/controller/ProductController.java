@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/Product")
+@RequestMapping("api/Products")
 public class ProductController {
     @Autowired
     private ProductService productService;
