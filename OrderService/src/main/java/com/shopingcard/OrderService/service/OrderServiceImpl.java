@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
                 .build();
 
         order = orderRepository.save(order);
-        return order.getId();
+        return order.getOrderId();
     }
 
     @Override
