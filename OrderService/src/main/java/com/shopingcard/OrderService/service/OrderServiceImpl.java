@@ -2,6 +2,7 @@ package com.shopingcard.OrderService.service;
 
 import com.shopingcard.OrderService.entity.Order;
 import com.shopingcard.OrderService.exception.CustomException;
+import com.shopingcard.OrderService.external.client.ProductService;
 import com.shopingcard.OrderService.model.OrderRequest;
 import com.shopingcard.OrderService.model.OrderResponse;
 import com.shopingcard.OrderService.repository.OrderRepository;
@@ -20,6 +21,9 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderRepository orderRepository;
 
+    @Autowired
+    private ProductService productService;
+
 
     @Override
     public long placeOrder(OrderRequest orderRequest) {
@@ -30,7 +34,7 @@ public class OrderServiceImpl implements OrderService {
 
         log.info("Placing Order Request: {}", orderRequest);
 
-//        productService.reduceQuantity(orderRequest.getProductId(), orderRequest.getQuantity());
+       productService.reduceQuantity(orderRequest.getProductId(), orderRequest.getQuantity());
 
         log.info("Creating Order with Status CREATED");
         Order order = Order.builder()

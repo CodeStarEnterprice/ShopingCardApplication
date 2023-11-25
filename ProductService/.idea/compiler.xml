@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ConfigServer" />
         <module name="OrderService" />
-        <module name="ProductService" />
         <module name="service-registry" />
+        <module name="ProductService" />
       </profile>
     </annotationProcessing>
   </component>
