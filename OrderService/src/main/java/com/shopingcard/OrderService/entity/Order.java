@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 import java.time.Instant;
 
 @Entity
-@Table(name = "ORDER_DETAILS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name = "ORDER_DETAILS")
 public class Order {
 
     @Id
